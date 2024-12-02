@@ -1,0 +1,61 @@
+@host = http://localhost:3000
+
+
+GET  {{host}}/api/products
+
+###
+
+GET  {{host}}/api/products/671b89453c3445b535fd408d
+
+###
+
+GET  {{host}}/api/products/actives
+
+###
+
+GET  {{host}}/api/products/price/350/990
+
+###
+POST {{host}}/api/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDgxZjBmNGVhZDA4NjkzNjY3YTBmIiwiaWF0IjoxNzMzMTM5MTYwfQ.a0FNxwpCUatvnM4qdKNmLqgKUjZNEJ92g48RwjyN87Y
+
+{
+    "name": "Cubo dinamico",
+    "description": "cubo infantil dinamico",
+    "price": 30,
+    "department": "juguetes",
+    "stock": 110,
+    "available": "true"
+}
+
+
+#####################
+#       USERS       #
+#####################
+
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "username": "Jack Solista",
+    "email": "solista@trivag.com",
+    "password": "Admin1234",
+    "role": "admin"
+}
+###
+
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "solista@trivag.com",
+    "password": "Admin1234"
+}
+
+PUT {{host}}/api/users/add-product/
+
+###
+
+
+
