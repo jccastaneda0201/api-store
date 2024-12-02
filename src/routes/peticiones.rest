@@ -1,4 +1,6 @@
-@host = http://localhost:3000
+//  @host = http://localhost:3000
+
+@host = https://api-store-nknc.onrender.com
 
 
 GET  {{host}}/api/products
@@ -38,8 +40,8 @@ POST {{host}}/api/users/register
 Content-Type: application/json
 
 {
-    "username": "Jack Solista",
-    "email": "solista@trivag.com",
+    "username": "urbandev",
+    "email": "urbandev@trivag.com",
     "password": "Admin1234",
     "role": "admin"
 }
@@ -49,13 +51,13 @@ POST {{host}}/api/users/login
 Content-Type: application/json
 
 {
-    "email": "solista@trivag.com",
+    "email": "urbandev@trivag.com",
     "password": "Admin1234"
 }
-
+###
 PUT {{host}}/api/users/add-product/
 
-###
+
 
 
 
